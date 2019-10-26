@@ -1,0 +1,27 @@
+type User {
+    id: Int
+    givenName: String
+    surName: String
+    googleId: String
+    userName: String
+    password: String
+    googleEmail: String
+}
+
+type Query {
+    allUsers: [User]
+    aUser(id: Int): User
+}
+
+type Mutation {
+    addUser(
+        givenName: String
+        surName: String
+        googleId: String
+        userName: String
+        password: String
+        googleEmail: String
+    ): Boolean
+    delUser(id: Int): Boolean
+}
+
